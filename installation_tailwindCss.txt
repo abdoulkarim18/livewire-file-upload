@@ -1,0 +1,23 @@
+INSTALLATION TAILWIND_CSS
+
+===npm install
+
+===npm install tailwindcss
+
+Add Tailwindcss to your resources/css/app.css
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+Create your Tailwind config file
+=====npx tailwindcss init
+
+Update your webpack.mix.js file
+====mix.js('resources/js/app.js', 'public/js')
+    .postCss('resources/css/app.css', 'public/css', [
+        require('tailwindcss'),
+    ]);
+
+===npm run dev
